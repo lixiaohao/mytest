@@ -10,7 +10,7 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context-3.1.xsd">
     <!--配置扫描路径-->
-    <context:component-scan base-package="com.lixiaohao" />
+    <context:component-scan base-package="com.lixiaohao.rabbitMQ" />
 
     <!--此配置等同于上面面的配置-->
     <bean id="configurers" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -21,10 +21,6 @@
         </property>
         <property name="fileEncoding" value="utf-8" />
     </bean>
-
-    <!--<import resource = "classpath*:spring-servlet.xml"/>-->
-
-    <!--<import resource="classpath*:morphia.xml" />-->
 
 <import resource="rabbitMQ-config.xml"/>
 
