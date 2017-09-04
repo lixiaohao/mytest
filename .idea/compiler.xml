@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="rabbitMQ-Spring-test" />
         <module name="rabbitMQ-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mytest" target="1.5" />
+      <module name="rabbitMQ-Spring-test" target="1.5" />
       <module name="rabbitMQ-test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
