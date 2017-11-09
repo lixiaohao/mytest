@@ -7,6 +7,6 @@ package com.lixiaohao.test.other;
  */
 public class BranchTest {
     public static void main(String[] args) {
-        System.out.println("测试一下而已");
+        System.out.println("在分支 dev-0901 中测试一下,然后再合并");
     }
 }
