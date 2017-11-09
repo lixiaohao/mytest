@@ -9,7 +9,7 @@ import com.rabbitmq.client.ConnectionFactory;
  */
 public class Send {
     //队列名称
-    private final static String QUEUE_NAME = "hello";
+    private final static String QUEUE_NAME = "test_queue1";
 
     public static void main(String[] argv) throws java.io.IOException
     {

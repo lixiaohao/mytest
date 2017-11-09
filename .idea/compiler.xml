@@ -6,12 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="javaCode-test" />
+        <module name="mybatis-test" />
+        <module name="mytest-emma" />
+        <module name="rabbitmq-consumer" />
+        <module name="rabbitmq-producer" />
         <module name="rabbitMQ-Spring-test" />
         <module name="rabbitMQ-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="javaCode-test" target="1.8" />
+      <module name="mybatis-test" target="1.5" />
       <module name="mytest" target="1.5" />
+      <module name="mytest-emma" target="1.5" />
+      <module name="rabbitmq-consumer" target="1.5" />
+      <module name="rabbitmq-producer" target="1.5" />
+      <module name="rabbitmq-spring" target="1.5" />
       <module name="rabbitMQ-Spring-test" target="1.5" />
       <module name="rabbitMQ-test" target="1.5" />
     </bytecodeTargetLevel>

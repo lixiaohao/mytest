@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../js/jquery-3.2.1.min.js" type="application/javascript" />
+</head>
+<body>
+<div id="div1">第一个</div>
+<button id="div2">点击</button>
+<script type="application/javascript">
+
+    $('#div2').click(function () {
+        alert('fd');
+
+
+
+        //定义最外层的 对象
+        var obj = {
+            movie:null,               //为一个数组
+            city: null,               //为一个数组
+            movieTime: {
+                type:1,
+                start:'',
+                end:''
+            },
+            signTime: {
+                type:5,
+                start:'2017-08-09',
+                end:'2017-09-09'
+            },
+            closeTime: {
+                type:3,
+                start:'2017-08-09',
+                end:'2017-09-09'
+            },
+            group: null              //为一个数组
+        };
+
+        //定义 数组movie
+        var movie=[];
+        var movieObj ={
+            id:6
+        };
+        movieArr.push(movieObj);
+
+        //定义 city
+        var  city = [];
+        var cityObj = {
+            name:"testname"
+        };
+        cityArr.push(cityObj);
+
+        //定义 group
+        var group = [];
+        var groupObj = {
+            id:2
+        };
+        groupArr.push(groupObj);
+
+
+        obj.group = group;
+        obj.movie = movie;
+        obj.city = city;
+
+        console.log( obj );
+
+
+    });
+
+</script>
+</body>
+</html>

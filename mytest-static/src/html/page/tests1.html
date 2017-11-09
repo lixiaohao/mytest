@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.2.1.min.js" > </script>
+</head>
+<body>
+<button id="butn">点击</button>
+<span id="fda"></span>
+
+<script type="application/javascript">
+    $('#butn').bind('click',function () {
+     alert('fd');
+    });
+    $('#butn').bind('click',function () {
+        setTimeout(ss(),20000);
+    });
+    function ss() {
+        alert('43');
+    }
+</script>
+</body>
+</html>

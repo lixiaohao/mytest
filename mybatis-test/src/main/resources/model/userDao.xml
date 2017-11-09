@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.UserDao">
+       <resultMap type="com.mybatis.model.User" id="UserResult">
+         <id column="ID" jdbcType="INTEGER" property="id"/>
+         <result column="USER_NAEM" jdbcType="VARCHAR" property="userName"/>
+         <result column="USER_PASS" jdbcType="VARCHAR" property="userPass"/>
+         <result column="USER_AGE" jdbcType="INTEGER" property="userAge"/>
+       </resultMap>
+       <select id="find" resultMap="UserResult">
+         SELECT * FROM t_user
+       </select>
+    <select id="findPage" resultMap="UserResult" >
+        SELECT * FROM t_user
+         LIMIT #{0},#{1}
+    </select>
+    <select id="queryPage" resultMap="UserResult" >
+        SELECT * FROM t_user WHERE 1=1 AND USER_NAEM like '%' #{0} '%'
+         LIMIT #{1},#{2}
+    </select>
+    <!--<select id="findPage" parameterType="String"  resultMap="UserResult" >-->
+      <!--#{sql}-->
+    <!--</select>-->
+       <select id="findById" parameterType="int" resultMap="UserResult">
+         SELECT * FROM t_user WHERE id=#{id}
+       </select>
+
+       <select id="findByName" parameterType="String" resultMap="UserResult" >
+       	SELECT * FROM t_user WHERE USER_NAEM=#{userName}
+       </select>
+
+       <select id="findByParams" parameterType="com.mybatis.model.User" resultMap="UserResult" >
+       SELECT * FROM t_user WHERE USER_NAEM=#{userName} AND USER_AGE=#{userAge}
+       </select>
+
+       <select id="fuzzyQuery" parameterType="com.mybatis.model.User" resultMap="UserResult" >
+       SELECT * FROM t_user WHERE USER_NAEM like '%' #{userName} '%'
+       </select>
+
+     	<select id="conditionsQuery" parameterType="com.mybatis.model.User" resultMap="UserResult" >
+     	SELECT * FROM t_user WHERE 1=1
+     	<if test="userName!=null and !&quot;&quot;.equals(userName.trim())">
+     	and USER_NAEM like '%' #{userName} '%'
+     	</if>
+     	<if test="userAge!=0">
+     		and USER_AGE = #{userAge}
+     	</if>
+     	</select>
+     	<insert id="insertUser" parameterType="com.mybatis.model.User" >
+     	insert into t_user(id,USER_NAEM,USER_PASS,USER_AGE) value(#{id},#{userName},#{userPass},#{userAge})
+     	</insert>
+     	<delete id="deleteUser" parameterType="com.mybatis.model.User" >
+     	delete from t_user where id=#{id}
+     	</delete>
+     </mapper>

@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/javaCode-test/javaCode-test.iml" filepath="$PROJECT_DIR$/javaCode-test/javaCode-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-test/mybatis-test.iml" filepath="$PROJECT_DIR$/mybatis-test/mybatis-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytest.iml" filepath="$PROJECT_DIR$/mytest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytest-emma/mytest-emma.iml" filepath="$PROJECT_DIR$/mytest-emma/mytest-emma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytest-static/mytest-static.iml" filepath="$PROJECT_DIR$/mytest-static/mytest-static.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitMQ-Spring-test/rabbitMQ-Spring-test.iml" filepath="$PROJECT_DIR$/rabbitMQ-Spring-test/rabbitMQ-Spring-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitMQ-test/rabbitMQ-test.iml" filepath="$PROJECT_DIR$/rabbitMQ-test/rabbitMQ-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-spring/rabbitmq-consumer/rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/rabbitmq-spring/rabbitmq-consumer/rabbitmq-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-spring/rabbitmq-producer/rabbitmq-producer.iml" filepath="$PROJECT_DIR$/rabbitmq-spring/rabbitmq-producer/rabbitmq-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-spring/rabbitmq-spring.iml" filepath="$PROJECT_DIR$/rabbitmq-spring/rabbitmq-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reactJS/reactJS.iml" filepath="$PROJECT_DIR$/reactJS/reactJS.iml" />
     </modules>
   </component>
 </project>

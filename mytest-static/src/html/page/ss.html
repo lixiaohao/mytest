@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
+
+    <script>
+
+        var arrray = [
+            'key1;value1','key2;value2','key3;value3'
+        ];
+        $(arrray).each(function(index,element){
+            var arr = element.split(';');
+            var obj = {
+                "name":arr[0],
+                "value":arr[1],
+                "type":"1"
+            }
+            console.log(obj);
+
+        });
+
+    </script>
+</head>
+
+
+<body>
+</body>
+</html>

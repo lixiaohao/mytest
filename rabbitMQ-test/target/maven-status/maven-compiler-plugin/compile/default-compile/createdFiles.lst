@@ -1,0 +1,8 @@
+com\lixiaohao\test\rebbitMQ\chapter3\EmitLogDirect.class
+com\lixiaohao\test\rebbitMQ\chapter3\ReceiveLogsDirect.class
+com\lixiaohao\test\rebbitMQ\chapter2\EmitLog.class
+com\lixiaohao\test\rebbitMQ\chapter1\Recv.class
+com\lixiaohao\test\rebbitMQ\chapter2\ReceiveLogsToConsole.class
+com\lixiaohao\test\rebbitMQ\chapter2\ReceiveLogsToSave.class
+com\lixiaohao\test\rebbitMQ\MqTest.class
+com\lixiaohao\test\rebbitMQ\chapter1\Send.class

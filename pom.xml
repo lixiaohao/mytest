@@ -11,7 +11,23 @@
     <modules>
         <module>rabbitMQ-test</module>
         <module>rabbitMQ-Spring-test</module>
+        <module>javaCode-test</module>
+        <module>mytest-emma</module>
+        <module>mybatis-test</module>
+        <module>rabbitmq-spring</module>
     </modules>
+
+    <properties>
+        <junit.version>4.11</junit.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

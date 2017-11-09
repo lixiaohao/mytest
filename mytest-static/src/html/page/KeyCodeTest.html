@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<span>开始输入:</span><input name="test" onkeypress="testCapsLock(event)" />
+
+<script type="application/javascript">
+
+    function testCapsLock(e) {
+        var valueCapsLock = e.keyCode ? e.keyCode:e.which; // 按键
+        console.log(valueCapsLock);
+    }
+
+</script>
+</body>
+</html>

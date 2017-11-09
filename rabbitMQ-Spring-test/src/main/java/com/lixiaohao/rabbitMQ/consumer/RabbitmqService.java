@@ -23,7 +23,6 @@ public class RabbitmqService implements ChannelAwareMessageListener {
 
             //处理成功，手动设置返回成功
             channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
-//            channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,true);
         }catch (Exception e){
             e.getMessage();
             //消息处理异常

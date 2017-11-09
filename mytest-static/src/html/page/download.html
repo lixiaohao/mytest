@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery-3.2.1.min.js" > </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!--<a href="http://localhost:8080/excel/excel" >点击下载</a>-->
+<a href="javascript:void(0)" id="download" >点击下载</a>
+</body>
+
+<script type="application/javascript">
+
+    var url = 'http://localhost:8080/excel/excel';
+//var url = 'http://localhost:8080/flow/callExport';
+
+var parms = {
+    movieTime: null
+}
+var timeParam = { type:1,
+    start:2,
+    end:3}
+
+//parms.movieTime = timeParam;
+
+    $('#download').click(function () {
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: parms,
+            success: function(response, status, request) {
+                var form = $('<form method="POST" action="' + url + '" name="params">');
+                form.append($("<input></input>").attr("type", "hidden").attr("name", "movieTime").attr("value", JSON.stringify(timeParam)));
+                $('body').append(form);
+                form.submit();
+            }
+        });
+    });
+
+</script>
+
+</html>
