@@ -7,6 +7,6 @@ package com.lixiaohao.test.other;
  */
 public class BranchTest {
     public static void main(String[] args) {
-        System.out.println("测试一下而已");
+        System.out.println("在 dev-0902 上测试一下而已");
     }
 }
