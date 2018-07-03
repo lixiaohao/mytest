@@ -148,4 +148,23 @@ public class StreamTest {
 
     }
 
+
+    @Test
+    public void joiningTest(){
+        List<StreamModel> models = new ArrayList<>();
+
+        StreamModel model1 = new StreamModel(3,126,"i");
+        StreamModel model2 = new StreamModel(2,120,"love");
+        StreamModel model3 = new StreamModel(5,124,"you");
+        models.add(model1);
+        models.add(model2);
+        models.add(model3);
+
+        String collect = models.stream().map(m -> m.getName())
+                .collect(Collectors.joining("\n"));
+        System.out.println(collect);
+
+
+    }
+
 }

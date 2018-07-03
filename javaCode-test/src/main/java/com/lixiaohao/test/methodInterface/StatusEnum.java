@@ -46,6 +46,7 @@ public enum StatusEnum {
         this.message = message;
     }
 
+
     interface DoInterface {
         boolean isMatch(StatusEnum statusEnum);
     }

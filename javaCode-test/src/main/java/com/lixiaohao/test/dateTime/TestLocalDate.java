@@ -24,7 +24,7 @@ public class TestLocalDate {
      * 使用LocaDate获取当前时间
      */
     @Test
-    public void test001(){
+    public void test000(){
         LocalDate now = LocalDate.now();
         System.out.println(now.toString());
     }
@@ -33,7 +33,7 @@ public class TestLocalDate {
      * 初始化日期
      */
     @Test
-    public void test002(){
+    public void test001(){
         LocalDate day1 = LocalDate.of(2018, 2, 3);
         System.out.println(day1);
 
@@ -42,6 +42,20 @@ public class TestLocalDate {
 
         LocalDate day3 = LocalDate.parse("20150201", DateTimeFormatter.ofPattern("yyyyMMdd"));
         System.out.println(day3);
+
+
+    }
+
+    /**
+     * 日期转字符串
+     */
+    @Test
+    public void test002(){
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDate now = LocalDate.now();
+        String date = dateTimeFormatter.format(now);
+        System.out.println(date);
 
 
     }

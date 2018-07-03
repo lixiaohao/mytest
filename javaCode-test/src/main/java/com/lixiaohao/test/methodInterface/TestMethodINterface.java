@@ -2,6 +2,10 @@ package com.lixiaohao.test.methodInterface;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
 /**
  * @program: mytest
  * @description:
@@ -30,14 +34,25 @@ public class TestMethodINterface {
     @Test
     public void test003(){
         MethodService service = new MethodService();
-        service.modeList(3,(data) -> {
-            for (Mode mode:data) {
-                if (mode.getAge() == 2){
-                    System.out.println(mode.toString());
-                }
+//        service.modeList(3,(data) -> {
+//            for (Mode mode:data) {
+//                if (mode.getAge() == 2){
+//                    System.out.println(mode.toString());
+//                }
+//            }
+//        });
+
+        service.modeList(5, new Consumer<List<Mode>>() {
+            @Override
+            public void accept(List<Mode> modes) {
+                System.out.println(modes.size());
+                System.out.println(modes);
             }
         });
+
     }
+
+
 
 
     @Test
@@ -52,5 +67,48 @@ public class TestMethodINterface {
             }
         });
     }
+
+    @Test
+    public void test005(){
+        MethodService service = new MethodService();
+        service.modeListDeal(3,(data,response) -> {
+            System.out.println(response);
+            for (Mode mode:data) {
+                if (mode.getAge() == 2){
+                    System.out.println(mode.toString());
+                    mode.setName("hahahah");
+                }
+            }
+        });
+    }
+
+
+
+    @Test
+    public void test006(){
+        MethodService service = new MethodService();
+        String hahahah = service.modeListDealList(3, (data, result) -> {
+            System.out.println(result);
+            for (Mode mode : data) {
+                if (mode.getAge() == 2) {
+                    System.out.println(mode.toString());
+                    mode.setName("hahahah");
+//                    return mode;
+                }
+            }
+            return data;
+        });
+
+        System.out.println(hahahah);
+    }
+
+    @Test
+    public void test07(){
+        MethodService service = new MethodService();
+
+    }
+
+
+
 
 }

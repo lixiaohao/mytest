@@ -1,8 +1,11 @@
 package com.lixiaohao.test.dateTime;
 
 import org.junit.Test;
+import org.springframework.format.datetime.joda.LocalDateParser;
+import org.springframework.format.datetime.joda.LocalDateTimeParser;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -14,6 +17,9 @@ import java.time.temporal.ChronoUnit;
 
 public class TestLocalDateTime {
 
+    /***
+     * 获取当前时间
+     */
     @Test
     public void test001(){
         LocalDateTime now = LocalDateTime.now();
@@ -21,8 +27,22 @@ public class TestLocalDateTime {
 
     }
 
+    /***
+     * 时间转化为字符串
+     */
+
     @Test
     public void test002(){
+        String format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS").format(LocalDateTime.now());
+        System.out.println(format);
+    }
+
+
+    /***
+     * 获取一天后时间
+     */
+    @Test
+    public void test003(){
         LocalDateTime now = LocalDateTime.now();
         System.out.println("现在时间:"+now.toString());
 

@@ -1,6 +1,6 @@
 package com.lixiaohao.test.enums;
 
-public enum Color {
+public enum Color implements BaseEnum{
     GREEN,
     RED
 }
