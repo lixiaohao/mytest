@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/document/document.iml" filepath="$PROJECT_DIR$/document/document.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaCode-test/javaCode-test.iml" filepath="$PROJECT_DIR$/javaCode-test/javaCode-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-test/mybatis-test.iml" filepath="$PROJECT_DIR$/mybatis-test/mybatis-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/mytest.iml" filepath="$PROJECT_DIR$/mytest.iml" />

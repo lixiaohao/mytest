@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="shuiyinTest">
+
+</canvas>
+
+<div>
+
+    <input id="shuiyinText" height="318px" width="300" value="" type="text"/>
+
+    <button id="shuiyinBtn" class="mui-btn mui-btn-primary" type="button"> 点击添加水印</button>
+
+</div>
+
+<script>
+
+    function shuiyin(canvasid,imgurl,addtext){
+
+        var img = new Image ;
+
+        img.src = imgurl;
+
+        img.onload = function(){
+
+            var canvas = document.getElementById(canvasid);
+
+            var ctx = canvas.getContext("2d");
+
+            ctx.drawImage(img,0,0);
+
+            ctx.font = "14px 微软雅黑";
+
+            ctx.fillStyle = "rgba(252,255,255,0.8)";
+
+            document.getElementById("shuiyinBtn").onclick = function(){
+
+                var addtext = document.getElementById("shuiyinText").value;
+
+                ctx.fillText(addtext,10,50); //选择位置
+
+            }
+
+        }
+
+    }
+
+    shuiyin("shuiyinTest","img/1.jpg")
+</script>
+</body>
+</html>

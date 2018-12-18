@@ -2,6 +2,9 @@ package com.lixiaohao.test.other;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by xiaohao.li on 2017/8/4.
  */
@@ -24,8 +27,15 @@ public class Other {
 
     @Test
     public void modelTest() {
-        Error error = new Error();
+        getIn();
     }
 
+
+
+    public List<TestInterFace> getIn(){
+        List<TestInterFace> s = new ArrayList<>();
+        s.add(new Modelss());
+        return s;
+    }
 
 }
